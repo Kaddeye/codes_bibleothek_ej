@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code-Spiel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Code-Spiel</h1>
+    <div id="mainMenu">
+      <button onclick="showQueryForm()">Möchtest du einen Code abfragen?</button>
+      <button onclick="showAddForm()">Möchtest du einen Code hinzufügen?</button>
+      <button onclick="showList()">Möchtest du die Liste sehen?</button>
+    </div>
+
+    <div id="querySection" class="hidden">
+      <input type="text" id="queryInput" placeholder="Gib eine Zahl ein" />
+      <button onclick="queryCode()">Code abfragen</button>
+      <p id="queryResult"></p>
+      <button onclick="returnToMenu()">Zurück</button>
+    </div>
+
+    <div id="addSection" class="hidden">
+      <input type="text" id="addInput" placeholder="Gib eine Zahl ein" />
+      <button onclick="checkAddCode()">Weiter</button>
+      <div id="addResult"></div>
+      <button onclick="returnToMenu()">Zurück</button>
+    </div>
+
+    <div id="listSection" class="hidden">
+      <h2>Alle Codes</h2>
+      <ul id="codeList"></ul>
+      <button onclick="returnToMenu()">Zurück</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
